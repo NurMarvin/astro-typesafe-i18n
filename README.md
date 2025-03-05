@@ -27,6 +27,7 @@ Additionally, if you are using the `Translate` component in an island, you need 
 ```astro
 ---
 import Translate from "./Translate.astro";
+import { getLangFromUrl, useTranslations } from "../lib/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
