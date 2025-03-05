@@ -1,0 +1,17 @@
+---
+import Welcome from "../../components/Welcome.astro";
+import Layout from "../../layouts/Layout.astro";
+import { languages } from "../../lib/i18n/ui";
+
+export async function getStaticPaths() {
+  const paths = Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+
+  return paths;
+}
+---
+
+<Layout>
+  <Welcome />
+</Layout>
